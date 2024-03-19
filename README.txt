@@ -140,7 +140,7 @@
       icmpv6-redirect
       icmpv6-rsol
 
-  0x04.1 Displaying Custom Protocols
+  0x04.2 Displaying Custom Protocols
 
    Apart from already existing protocols, Protocol can represent any arbitrary
    protocol headers. In order to do that, instead of specifying the name of
@@ -172,7 +172,6 @@
     Also, note that field lengths don't need to align to the length of the
     line. If a particular field is too long, Protocol will just wrap it to the
     next line. Here are some examples:
-
     $ protocol "Source:16,TTL:8,Reserved:40"
      0                   1                   2                   3
      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
@@ -181,7 +180,7 @@
     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+               +
     |                            Reserved                           |
     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
+    ```
 
     $ protocol "Source:16,Reserved:40,TTL:8"
      0                   1                   2                   3
